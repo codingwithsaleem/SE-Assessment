@@ -54,24 +54,41 @@
 
 // bariTeach IT company interview question 
 
-// find the repeated  alphabates in given word 
+//Find the repeated  alphabets in given word 
 
-function nonRepeatedaplha(str){
-    let result = '';
-    for(let i=0;i<str.length;i++){
-        if(str.indexOf(str[i])==str.lastIndexOf(str[i])){
-            result+=str[i];
+// function nonRepeatedaplha(str){
+//     let result = '';
+//     for(let i=0;i<str.length;i++){
+//         if(str.indexOf(str[i])==str.lastIndexOf(str[i])){
+//             result+=str[i];
+//         }
+//     }
+//     return result;
+// }
+
+// console.log(nonRepeatedaplha('saalemem'));
+
+
+
+//there is one arry called numbers = [1,4,3,4,5,6,7,8,9,5] and you have to write a function that will take this array as an argument and return a new array 
+// that the first element of numbers will become the first element of new array then the last element of numbers will become the second element of new array then 
+// second element of numbers will become the third element of the new array and so on.
+
+
+let myArray= (numbers)=>{
+    let newArray= [];
+    let length= numbers.length;
+    
+    for(let i=0; i<Math.ceil(length/2); i++){
+        newArray.push(numbers[i]);
+        if(i!==length-i-1){
+            newArray.push(numbers[length-i-1]);
         }
     }
-    return result;
+    return newArray
 }
 
-console.log(nonRepeatedaplha('saalemem'));
-
-
-
-
-
+console.log(myArray([2,5,3,7]))
 
 
 
