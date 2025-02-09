@@ -92,5 +92,49 @@ console.log(myArray([2,5,3,7]))
 
 
 
+// find the second largest number form array 
+
+function findSecondLargest(arr){
+    let secondlargest = arr.sort((a,b)=>{
+    return b-a
+})
+return secondlargest[1]
+}
+
+console.log(findSecondLargest([83,54,334,33,2]))
+
+// find the  largest number form array 
+
+function findLargest(arr){
+    let secondlargest = Math.min.apply(null, arr)
+return secondlargest
+}
+
+console.log(findLargest([83,54,334,33,2]))
+
+// find the factrioal use recursion
+
+function findFactroial(num){
+    if(num===0 || num===1){
+        return 1
+    }
+   return  num * findFactroial(num-1)
+}
+
+console.log(findFactroial(3))
+
+
+// find nth number of Fibonacci Series
+
+const  fibonacciSeries= (num)=>{
+    if(num<=1) return num;
+    return fibonacciSeries(num-1)+fibonacciSeries(num-2)
+}
+
+console.log(fibonacciSeries(6))
+
+
+
+
 
 
